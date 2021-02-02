@@ -23,6 +23,7 @@ add_executable(
 
 target_compile_options(${PROJECT_NAME} PUBLIC -Os)
 
-target_link_arduino_libraries(${PROJECT_NAME} PRIVATE SoftwareSerial core)
+# GxEPD2 needs to be installed as regular Arduino library
+target_link_arduino_libraries(${PROJECT_NAME} PRIVATE SoftwareSerial core GxEPD2)
 
 target_enable_arduino_upload(${PROJECT_NAME})
